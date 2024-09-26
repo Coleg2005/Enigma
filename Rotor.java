@@ -11,19 +11,30 @@ public class Rotor {
         this.startChar = c;
         
         while(!this.rotate()){
-            char temp = rotorValues[currentidx];
-            rotorValues[currentidx] = rotorValues[cuurentidx + 1];
+            
+            
         }
             
     }
     
     // If the current index has passed its max, rotate & reset currentidx
     public boolean rotate(){
-        if( currentidx == 28) {
-            currentidx = 0;
+            char rotarr[] = rotorValues.toCharArray();
+    
+            char temp = rotarr[27];
+    
+                for(int i = 27; i > 0; i--){
+    
+                rotarr[i] = rotarr[i - 1];
+    
+                }
+    
+                rotarr[0] = temp;
+                rotorValues = rotarr.toString();
 
-            return true;
-        }
+                if(charAt(0) == startChar){
+                    return true;
+                }
 
         return false;
 

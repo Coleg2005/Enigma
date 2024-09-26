@@ -19,17 +19,63 @@ public class Enigma{
     }
 
 
-    public String decrypt(String message){        
+    public String decrypt(String message){    
+
+        char[] messagearr = message.toCharArray();
+
+        char[] result = new char[messagearr.length];
+        
+        for(int i = 0; i < message.length(); i++){
+
+                int index_in = rotors[0].indexOf(messagearr[i]);
+
+                char out = rotors[2].charAt(index_in);
+
+                int mid_index = rotors[1].indexOf(out);
+
+                char out2 = rotors[2].charAt(mid_index);
+
+                result[i] = out2;
+
+                rotate();
+        }
+
         
 
-
-
+        return new String (result);
+             
     }
 
 
     
     public String encrypt(String message){
-        //TODO
+
+        char[] messagearr = message.toCharArray();
+
+        char[] result = new char[messagearr.length];
+        
+        for(int i = 0; i < message.length(); i++){
+
+                int index_in = rotors[0].indexOf(messagearr[i]);
+
+                char out = rotors[2].charAt(index_in);
+
+                int mid_index = rotors[1].indexOf(out);
+
+                char out2 = rotors[2].charAt(mid_index);
+
+                result[i] = out2;
+
+                rotate();
+        }
+
+        
+
+        return new String (result);
+
+    }
+        
+
 
     
     private void rotate(){

@@ -21,16 +21,16 @@ public class Rotor {
     public boolean rotate(){
             char rotarr[] = rotorValues.toCharArray();
     
-            char temp = rotarr[26];
+            char temp = rotarr[27];
     
-            for(int i = 26; i > 0; i--){
+            for(int i = 27; i > 0; i--){
     
                 rotarr[i] = rotarr[i - 1];
     
             }
     
             rotarr[0] = temp;
-            rotorValues = rotarr.toString();
+            rotorValues = new String (rotarr);
 
             if(charAt(0) == startChar){
                 return true;

@@ -27,13 +27,13 @@ public class Enigma{
         
         for(int i = 0; i < message.length(); i++){
 
-                int index_in = rotors[0].indexOf(messagearr[i]);
+                int out2 = rotors[2].indexOf(messagearr[i]);
 
-                char out = rotors[2].charAt(index_in);
+                char mid_index = rotors[1].charAt(index_in);
 
-                int mid_index = rotors[1].indexOf(out);
+                int out = rotors[2].indexOf(out);
 
-                char out2 = rotors[2].charAt(mid_index);
+                char index_in = rotors[0].charAt(mid_index);
 
                 result[i] = out2;
 

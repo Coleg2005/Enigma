@@ -29,13 +29,13 @@ public class Enigma{
 
                 int out2 = rotors[2].indexOf(messagearr[i]);
 
-                char mid_index = rotors[1].charAt(index_in);
+                char mid_index = rotors[1].charAt(out2);
 
-                int out = rotors[2].indexOf(out);
+                int out = rotors[2].indexOf(mid_index);
 
-                char index_in = rotors[0].charAt(mid_index);
+                char index_in = rotors[0].charAt(out);
 
-                result[i] = out2;
+                result[i] = index_in;
 
                 rotate();
         }

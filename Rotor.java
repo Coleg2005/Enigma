@@ -21,9 +21,9 @@ public class Rotor {
     public boolean rotate(){
             char rotarr[] = rotorValues.toCharArray();
     
-            char temp = rotarr[27];
+            char temp = rotarr[26];
     
-            for(int i = 27; i > 0; i--){
+            for(int i = 26; i > 0; i--){
     
                 rotarr[i] = rotarr[i - 1];
     
